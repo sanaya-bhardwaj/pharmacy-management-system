@@ -11,7 +11,7 @@ function Inventory({ setActiveTab }) {
   }, []);
 
   const fetchMedicines = async () => {
-    const res = await axios.get("http://127.0.0.1:8000/medicines");
+    const res = await axios.get(`${API}/medicines`);
     setMedicines(res.data);
   };
 

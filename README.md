@@ -1,4 +1,4 @@
-# 💊 Pharmacy Management System
+# Pharmacy Management System
 
 A Full-Stack Pharmacy Management System built using React (Frontend) and FastAPI (Backend).  
 This system helps manage medicines, track stock, record purchases, and record sales efficiently.
@@ -39,29 +39,6 @@ The project is fully deployed in production.
 - Frontend: Vercel
 - Backend: Render
 - Version Control: GitHub
-
----
-
-## 📂 Project Structure
-
-pharmacy-management-system/
-│
-├── backend/
-│   ├── main.py
-│   ├── models.py
-│   ├── database.py
-│   └── requirements.txt
-│
-├── frontend/
-│   ├── src/
-│   │   ├── Dashboard.js
-│   │   ├── Inventory.js
-│   │   ├── Sales.js
-│   │   ├── Purchases.js
-│   │   └── App.js
-│   └── package.json
-│
-└── README.md
 
 ---
 

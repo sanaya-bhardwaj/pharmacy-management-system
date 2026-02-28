@@ -9,18 +9,20 @@ function Purchases({ setPage }) {
   const [supplier, setSupplier] = useState("");
   const [cost, setCost] = useState("");
 
+  const API = process.env.REACT_APP_API_URL;
+
   useEffect(() => {
     fetchMedicines();
     fetchPurchases();
   }, []);
 
   const fetchMedicines = async () => {
-    const res = await axios.get("http://127.0.0.1:8000/medicines");
+    const res = await axios.get(`${API}/medicines`);
     setMedicines(res.data);
   };
 
   const fetchPurchases = async () => {
-    const res = await axios.get("http://127.0.0.1:8000/purchases");
+    const res = await axios.get(`${API}/purchases`);
     setPurchases(res.data);
   };
 
@@ -30,7 +32,7 @@ function Purchases({ setPage }) {
       return;
     }
 
-    await axios.post("http://127.0.0.1:8000/purchases", {
+    await axios.post(`${API}/purchases`, {
       medicine_id: parseInt(medicineId),
       quantity: parseInt(quantity),
       supplier: supplier,

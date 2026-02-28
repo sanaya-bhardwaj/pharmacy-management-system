@@ -4,12 +4,14 @@ import axios from "axios";
 function Sales({ setActiveTab }) {
   const [sales, setSales] = useState([]);
 
+  const API = process.env.REACT_APP_API_URL;
+
   useEffect(() => {
     fetchSales();
   }, []);
 
   const fetchSales = async () => {
-    const res = await axios.get("http://127.0.0.1:8000/sales");
+    const res = await axios.get(`${API}/sales`);
     setSales(res.data);
   };
 

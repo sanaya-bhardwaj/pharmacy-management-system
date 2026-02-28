@@ -4,6 +4,8 @@ import axios from "axios";
 function Inventory({ setActiveTab }) {
   const [medicines, setMedicines] = useState([]);
 
+  const API = process.env.REACT_APP_API_URL;
+
   useEffect(() => {
     fetchMedicines();
   }, []);

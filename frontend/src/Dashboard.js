@@ -7,7 +7,8 @@ function Dashboard() {
   const [medicineId, setMedicineId] = useState("");
   const [quantity, setQuantity] = useState("");
 
-  const API = "http://127.0.0.1:8000";
+  //const API = "http://127.0.0.1:8000";
+  const API = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     fetchMedicines();
